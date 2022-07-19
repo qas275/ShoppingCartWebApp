@@ -6,7 +6,7 @@ import java.util.List;
 public class Cart {
     public String username;
     public Cart(){
-
+        username = "asdasda";//TODO remove this, for now just to check
     }
     public String getUsername() {
         return username;

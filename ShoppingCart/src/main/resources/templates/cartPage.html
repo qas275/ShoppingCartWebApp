@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Cart</title>
+</head>
+<body>
+    <h1>Welcome to your(user) cart</h1>
+    <div>
+        <p th:object="${shoppingCart}">
+            Username:<input type="text" id="username" th:field="*{username}">
+        </p>
+        <!--    Other code referenced online
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("username").innerHTML = this.responseText;}                
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        };-->
+        <script>
+            document.getElementById("username").onmouseout = function() {updatePage()};
+            function updatePage(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "@{/cartPage}", true);
+                xhttp.send();
+            }
+        </script>
+        <form></form>
+    </div>
+    <h2>qwert</h2>
+</body>
+</html>
